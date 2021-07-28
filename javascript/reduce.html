@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  var arr = ['1', '2', '3', '4', '5'];
+
+  // 2번째 index부터 처음부터 끝까지 (default)의 엘리먼트를 복사합니다.
+  // 배열 길이를 넘어가는 부분은 무시됩니다.
+  console.log(arr.copyWithin(4)); // ["a", "b", "a", "b", "c"]
+
+  // 원본 배열이 변경됩니다.
+  console.log(arr); // ["a", "b", "a", "b", "c"]
+
+
+  var evenGen = (length) => Array.from({length}, (value, index) => index*2);
+  console.log(evenGen(5)); // [0, 2, 4, 6, 8]
+
+  const oneTwoThree = [1, 2, 3,4];
+
+  const ones = oneTwoThree.map(n => n);
+
+  console.log(oneTwoThree,ones)
+
+  result = oneTwoThree.reduce((acc, n , i) => {
+    console.log(acc, n, i);
+    return acc + n;
+  }, 0);
+  console.log('----------------')
+  result2 = oneTwoThree.reduceRight((acc, n , i) => {
+    console.log(acc, n, i);
+    return acc + n;
+  }, 0);
+  // 0 1 0
+  // 1 2 1
+  // 3 3 2
+  console.log(result); // 6
+  console.log('----------------')
+  console.log(result2)
+
+
+  result3 = oneTwoThree.reduce((acc, cur) => {
+    var temp =  (cur % 2 ? '홀수' : '짝수');
+    if(temp=='짝수'){
+      acc.push(temp);
+    }
+    return acc;
+  }, []);
+  console.log(result3); // ['홀수', '짝수', '홀수']
+
+
+  const promiseFactory = (time) => {
+    return new Promise((resolve, reject) => {
+      console.log(time);
+      setTimeout(resolve, time);
+    });
+  };
+  [1000, 2000, 3000, 4000].reduce((acc, cur) => {
+    return acc.then(() => promiseFactory(cur));
+  }, Promise.resolve());
+
+
+  const arFrom = Array.from(
+          {length: 20}, // 배열
+          () => Array(5).fill(0) // 각각의 배열에 적용할 함수
+  );
+
+  console.log(arFrom,typeof arFrom);
+</script>
+</body>
+</html>

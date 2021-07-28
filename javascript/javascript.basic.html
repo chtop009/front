@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  자바스크립트
+
+  //
+  var , 동일한 변수명 계속 선언 할수 있음
+  let,  동일한 변수 선언 못함 제할당은 할수 있음
+  const 한번 할당한 값을 제 할달 없음 , 절대 바뀌지 않는 값들 선언
+
+
+
+
+
+  1.
+  type 반환
+
+  typeof 10;        // number 타입
+
+  typeof "문자열";  // string 타입
+
+  typeof true;      // boolean 타입
+
+  typeof undefined; // undefined 타입
+
+  typeof null;      // object 타입
+
+
+  2.명시적 타입 변환
+  1. Number()
+
+  2. String()
+
+  3. Boolean()
+
+  4. Object()
+
+  5. parseInt()
+
+  6. parseFloat()
+
+
+
+  예제
+  Number("10"); // 숫자 10
+
+  String(true); // 문자열 "true"
+
+  Boolean(0);  // 불리언 false
+
+  Object(3);    // new Number(3)와 동일한 결과로 숫자 3
+
+
+
+
+
+
+  3.
+  arguments 객체
+  만약 함수의 정의보다 더 많은 수의 인수가 전달되면, 매개변수에 대입되지 못한 인수들은 참조할 방법이 없게 됩니다.
+
+          하지만 arguments 객체를 이용하면, 함수로 전달된 인수의 총 개수를 확인하거나, 각각의 인수에도 바로 접근할 수 있습니다.
+
+
+
+          arguments 객체는 함수가 호출될 때 전달된 인수를 배열의 형태로 저장하고 있습니다.
+
+          첫 번째 인수는 arguments[0]에 저장되며, 다음 인수는 arguments[1]에 저장됩니다.
+
+          또한, 인수의 총 개수는 arguments 객체의 length 프로퍼티에 저장됩니다.
+
+
+
+          다음 예제의 addNum() 함수는 전달받는 인수의 개수에 상관없이 언제나 정상적인 계산을 수행합니다.
+
+
+  4.
+
+  Object.create() 메소드를 이용한 객체의 생성
+  Object.create() 메소드를 이용하여 객체를 생성할 수도 있습니다.
+
+  Object.create() 메소드는 지정된 프로토타입(prototype) 객체와 프로퍼티를 가지고 새로운 객체를 만들어 줍니다.
+
+          따라서 이 메소드를 이용하면 사용자가 프로토타입 객체를 직접 명시할 수 있으므로, 상당히 유용하게 사용됩니다.
+
+          문법
+  Object.create(프로토타입객체[, 새로운객체의프로퍼티1, 새로운객체의프로퍼티2, ...]);
+
+
+
+  Object.create() 메소드의 첫 번째 인수로는 프로토타입으로 사용할 객체를 전달합니다.
+
+
+  5.
+  1. hasOwnProperty()
+
+  2. propertyIsEnumerable()
+
+  3. isPrototypeOf()
+
+  4. isExtensible()
+
+  5. toString()
+
+  6. valueOf()
+
+
+
+  6.
+
+
+  표준 객체(Standard Object)
+  자바스크립트에서 표준 객체(standard object)는 다른 객체의 기초가 되는 핵심적인 객체입니다.
+
+
+
+          자주 사용되는 대표적인 자바스크립트 표준 객체는 다음과 같습니다.
+
+
+
+  1. Number 객체
+
+  2. Math 객체
+
+  3. Date 객체
+
+  4. String 객체
+
+  5. Array 객체
+
+
+
+
+
+
+
+  7.
+  //자바스크립트 Array 메소드
+  ////메소드 설명
+  //Array.isArray() 전달된 값이 Array 객체인지 아닌지를 검사함.
+  //Array.from() 배열과 비슷한 객체와 반복할 수 있는 객체를 배열처럼 변환함.
+  //Array.of() 인수의 수나 타입에 상관없이 인수로 전달받은 값을 가지고 새로운 Array 인스턴스를 생성함.
+
+  8.
+
+  //push() 메소드
+  //push() 메소드는 하나 이상의 요소를 배열의 가장 마지막에 추가합니다.
+
+
+  //9.예외처리
+
+
+  var btn = document.getElementById("throwExBtn");      // 아이디가 "throwExBtn"인 요소를 선택함.
+
+  btn.addEventListener("click", throwEx);              // 선택한 요소에 click 이벤트 리스너를 등록함.
+
+  function throwEx() {
+
+    try {
+
+      throw new Error("직접 발생시킨 오류입니다!"); // Error 객체를 사용해 명시적으로 오류를 발생시킴.
+
+    } catch (ex) { // 발생된 오류를 매개변수 ex로 접근할 수 있음.
+
+      document.getElementById("text").innerHTML = ex.name + "<br>"; // name 프로퍼티는 오류의 타입을 저장함.
+
+      document.getElementById("text").innerHTML += ex.message;  // message 프로퍼티는 오류 메시지를 저장함.
+
+    }
+
+  }
+
+  ///
+
+  //includes
+
+  //includes() 메서드는 배열이 특정 요소를 포함하고 있는지 판별합니다.
+
+          const array1 = [1, 2, 3];
+
+  console.log(array1.includes(2));
+  // expected output: true
+
+  const pets = ['cat', 'dog', 'bat'];
+
+  console.log(pets.includes('cat'));
+  // expected output: true
+
+  console.log(pets.includes('at'));
+  // expected output: false
+</body>
+</html>

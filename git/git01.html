@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+터미널 git init
+
+https://www.youtube.com/watch?v=FXDjmsiv8fI
+
+
+git config --global user.name "chtop009"
+git config --global user.email chtop009@gmail.com
+
+
+git status  담기지 않은 파일 확인
+
+
+git add -A  깃의 타임캐슐에 넣어보자
+
+git commit -m "Firsrt commit"  타임 캡슐 묻을때 설명
+
+git log 히스토리 확인
+
+git reset 8adc8--hard    일련번호 앞 6자리 넣고 그 시점으로 돌아가자  복원 안됨
+
+git revert f1ce4dc  미래 시점 남겨두고 과거시점으로 돌아감
+
+
+평행 우주 내 작업 놔두고 다른기로 감
+git branch my-idea
+
+git checkout my-idea  my-idea 로 넘어감
+
+위에 두줄 동시에 git checkout -b my-idea
+
+
+git checkout master
+
+
+git merge my-idea2  병합.
+
+git rebase my-idea2  한줄로 깔끔히 병합
+
+
+
+git log --graph --all --decorate
+
+git brahch -D my-idea  브랜치 삭제
+
+
+Git Hub 사용
+
+git remote
+
+git hum 에서 복사에서 콘솔에 붙여 넣음
+
+git remote add origin https://github.com/chtop009/vue-cli.git
+git push -u origin master
+
+
+
+git push origin  master  깃허브 업로드
+
+
+긱허브 클론 다운로드
+계정 폴더 생성후
+git clone https://github.com/chtop009/shortterm.git
+
+
+
+
+
+다른 사람과 공동 작업시  원격에서 다운받아야 할것 체크
+
+git fetch
+
+git status 하면 다운로드 받아야 할것이 나옴
+
+git pull origin master 다운 받아 보자
+
+
+
+git branch -a  로컬 원격 둘다 볼수 있음
+
+
+git fetch  해서 새 브런치 가져옴
+[new branch]      my-idea    -> origin/my-idea 새브런치 있는거 확인 했음
+
+>git checkout -b my-idea origin/my-idea 로컬에서 원력 브런치 가져와서 가져온 브런치로 이ㄴ동한다.
+
+git branch -D my-idea
+>git push -d origin  my-idea  원격 브런치 삭게
+</body>
+</html>

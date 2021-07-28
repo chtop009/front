@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+브라우져 JavaScript  해석엔진 있음  (크롬 V8)
+노드 JS 크롬의 자바스크립트 해석엔진
+브라우저 네에서도 말고 다른환경에서도 자바스크립트를 실행할수 있게 한다.
+
+노드 JS 는 쉽게 말하면 그냥 자바스크립트 실행창임. = 런타임
+
+콘솔
+node  -v 노드 버번
+node 자바스크립트 실행창
+
+npm 라이브러리를 설치하는 도구
+
+npm init 라이브러리 설치  ㄱ
+라이브러리를 멀 썼는지 package.json
+
+
+
+express 라이브러리슬 써서 서버를 만듬
+
+npm install express
+
+
+5
+
+(server.js 파일)
+
+const express = require('express');
+const app = express();
+
+app.listen(8080, function() {
+console.log('listening on 8080')
+})
+
+
+node server.js
+
+
+app.get('/pet', function(요청, 응답) {
+응답.send('펫용품 사시오')
+})
+
+
+서버 재실행 귀찮음 npm install -g nodemon
+-g 는 모든 폴더에서 설치해주세요 라는 뜻
+
+오류 뜨면 관리자권한 으로 실행
+
+1.executionpolicy 입력
+2.set-executionpolicy unrestricted
+3.y 입력
+
+</body>
+</html>
