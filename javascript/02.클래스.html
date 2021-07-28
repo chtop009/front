@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>클래스 객체지향</title>
+</head>
+<body>
+<script>
+  //class
+  //선언적 방식
+  class A{}
+  console.log(new A())
+
+  //class  표현식을 변수에 할땅
+  const B = class{};
+  console.log(new B())
+
+  //constructor
+
+  class AA{}
+  console.log(new AA());
+  class BB{
+    constructor() {
+      console.log('constructor')
+    }
+  }
+
+  console.log(new BB())
+
+
+  class BC{
+    constructor(name) {
+      console.log('constructor',name)
+    }
+  }
+
+  console.log(new BC('이창현'))
+
+
+
+  class Names{
+      constructor(name,age) {
+          this.name = name ;
+          this.age = age ;
+          console.log('constructor',name,age)
+      }
+  }
+
+  console.log(new Names('이창현',27))
+
+  class Name2{
+      name;
+      age;
+  }
+
+  //멤버함수
+
+  class Name3{
+
+      hello(){
+          console.log(1,this);
+      }
+
+      hello2 = () => {
+          console.log(2,this);
+      }
+  }
+
+  console.log(new Name3());
+  new Name3().hello();
+  new Name3().hello2();
+
+
+</script>
+</body>
+</html>

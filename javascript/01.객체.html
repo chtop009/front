@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>객체</title>
+</head>
+<body>
+//prototype
+<script>
+  function Person(name,age){
+    this.name = name;
+    this.age = age;
+
+    this.hello = () => {
+      console.log('helll',this.name,this.age)
+    }
+  }
+
+  const p = new Person('이창현',15);
+  p.hello();
+
+  console.log(Person.prototype)
+  console.log(Person.constructor)
+  console.log(Person.prototype.hello)
+
+  console.log(p instanceof Person);
+  console.log(p instanceof Object)
+
+  //prototype 상속
+
+  function Person2(){}
+
+
+
+  Person2.prototype.hello = function(){
+      console.log('hello2');
+  };
+
+  function Korean(region){
+      this.region = region ;
+      this.where = function(){
+          console.log('where', this.region);
+      }
+  }
+
+  Korean.prototype = Person2.prototype ;
+
+  const k = new Korean('Seoul')
+
+  k.hello();
+  k.where();
+
+  console.log(k instanceof Korean);
+  console.log(k instanceof Person2);
+  console.log(k instanceof Object);
+
+  //객체 리터럴
+
+  const a = {} ;
+  console.log(a, typeof a);
+
+  const c= {
+      name : 'Mark',
+      hello1(){
+          console.log('hello1', this)
+      },
+      hello2 : function(){
+          console.log('hello2',this)
+      },
+      hello3 : ()=>{
+          console.log('hello3',this)
+      }
+
+  }
+
+  c.hello1();
+  c.hello1();
+  c.hello3();
+
+
+  //표준 내장 객체
+
+  const ar = new Array('red','black','white');
+
+  console.log(ar, typeof ar);
+  console.log(ar instanceof Array);
+  console.log(ar instanceof Object);
+  console.log(ar.slice(0,2));
+  console.log(Array.prototype.slice);
+
+</script>
+</body>
+</html>

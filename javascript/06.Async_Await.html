@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Async Await</title>
+</head>
+<body>
+<script>
+  //프로미스 객체를 리턴하는 함수
+  function p(ms){
+    return  new Promise((resolv ,reject) => {
+      setTimeout(()=>{
+        resolv(ms);
+      },ms);
+    }) ;
+  }
+
+  // 프로미스 객체를 이용해서 비동기 로직 수행
+ /* p(1000).then(ms=>{
+    console.log(`${ms} ms 후에 실행된다.`)
+  })
+  */
+
+
+  //프롯미스 객채를 리턴하는 함수를 await 로 호출하는 방법
+  (async function main(){
+    const ms = await p(1000);
+    console.log(`${ms} ms 후에 실행된다.`)
+  })();
+
+
+
+  //프로미스 객체를 리턴하는 함수
+  function p2(ms){
+    return  new Promise((resolv ,reject) => {
+      setTimeout(()=>{
+        reject(new Error('reason'));
+      },ms);
+    }) ;
+  }
+
+  //프롯미스 객채를 리턴하는 함수를 await 로 호출하는 방법
+  (async function main(){
+    try{
+      const ms = await p2(2000);
+      console.log(`${ms} ms 후에 실행된다.`)
+    }catch(error){
+      console.log(error)
+    }
+  })();
+
+  async function asP(){
+    const ms = await p(5000);
+    return '이창현';
+  }
+
+  //프롯미스 객채를 리턴하는 함수를 await 로 호출하는 방법
+  (async function main2(){
+    try{
+      const name = await asP();
+      console.log(name)
+    }catch(error){
+      console.log(error)
+    } finally{
+      console.log('End')
+    }
+  })();
+
+  (async function main2(){
+    await p(5000)
+    console.log('5초후에 나오나');
+    await p(1000)
+    console.log('6초후에 나오나');
+    await p(1000)
+    console.log('7초후에 나오나');
+    console.log('끝났다.')
+
+  })();
+
+  //romise.all
+  (async function main3(){
+      const results  = await Promise.all([p(1000),p(2000),p(3000)]);
+      console.log(results)
+  })();
+
+  //romise.all
+  (async function main4(){
+    const results  = await Promise.race([p(1000),p(2000),p(3000)]);
+    console.log(results)
+  })();
+
+</script>
+</body>
+</html>

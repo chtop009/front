@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+
+    //indexOf()  indexOf 는 찾은 값의 첫번째 원소의 위치를 반환해주며, 없을경우 -1을 리턴합니다.
+    var a = ['이창현','김사랑','조경희']
+    console.log(a.indexOf('이창현'))
+    //includes() 는 배열속 해당 원소가있으면 true / 없으면 false를 반환합니다.
+    console.log(a.includes('이창현'))
+
+    //every() 나이에 대한 조건을 두고 every()의 return 값을 확인해보는 예제입니다. 배열에 대해서 배열 내의 모든 항목이 조건을 만족하는지 체크하며, 하나라도 false이면 false입니다.
+    var objArr = [{name: '철수', age: 10}, {name: '영희', age: 10}, {name: '바둑이', age: 2}]
+
+    console.log(objArr.every((item)=> item.age > 5)); //false (바둑이 탈락!)
+    console.log(objArr.every((item)=> item.age>1)); //true
+
+    //some()은 배열의 각 엘리먼트에 대해서 테스트 함수의 반환 값이 하나라도 true가 있는지 확인합니다.
+    var objArr = [{name: '철수', age: 10},{name: '영희', age: 10}, {name: '바둑이', age: 2}]
+
+    console.log(objArr.some((item)=> item.age>5)); //true
+    console.log(objArr.some((item)=> item.age>10)); //false (모두 탈락!)
+
+    //map()
+    //map의 기본 원리는 간단합니다. 반복문을 돌며 배열 안의 요소들을 1대1로 짝지어 주는 것입니다. 그래서 이름이 map입니다. 매핑한다고 표현하죠
+    //알아둘 점은, map을 실행하는 배열과 결과로 나오는 배열이 다른 객체라는 것입니다. 기존 배열을 수정하지 않고 새로운 배열을 만들어냅니다.
+
+    let numbers = [1, 4, 9]
+    let parameters = numbers.map(
+        (num, index, arr) => {
+            console.log(index)
+        })
+
+    //filter
+    //filter 메소드는 이름 그대로 요소들을 걸러내는 것이 목적입니다. 예제를 봅시다.
+
+    var arr = [4, 15, 377, 395, 400, 1024, 3000];
+    var arr2 = arr.filter( (n) => {
+        return n % 5 == 0;
+    });
+    console.log(arr2); // [15, 395, 400, 3000]
+
+
+    console.log('reduce()')
+    //reduce
+    //열.reduce((누적값, 현재값, 인덱스, 요소) => { return 결과 }, 초깃값);
+    const oneTwoThree = [1, 2, 3];
+    result = oneTwoThree.reduce((acc, cur, i) => {
+        console.log(acc, cur, i);
+        return acc + cur;
+    }, 0);
+    // 0 1 0
+    // 1 2 1
+    // 3 3 2
+    result; // 6
+
+
+    let rr = ["lion", "tiger"].reduce(
+        ( result, curr ) => {
+            result[curr] = curr;
+            return result;
+        },
+        {}
+    );
+    console.log(rr) // 결과값: {lion: "lion", tiger: "tiger"}
+
+    /////////////reduce() 메서드는 배열의 각 요소에 대해 주어진 리듀서(reducer) 함수를 실행하고, 하나의 결과값을 반환합니다.
+    const array1 = [1, 2, 3, 4];
+    const reducer = (accumulator, currentValue) => accumulator + currentValue;
+
+    // 1 + 2 + 3 + 4
+    console.log(array1.reduce(reducer));
+    // expected output: 10
+
+    // 5 + 1 + 2 + 3 + 4
+    console.log(array1.reduce(reducer, 10));
+    // expected output: 15
+
+    //concat() 메서드는 인자로 주어진 배열이나 값들을 기존 배열에 합쳐서 새 배열을 반환합니다.
+    const array0 = ['a', 'b', 'c'];
+    const array2 = ['d', 'e', 'f'];
+    const array3 = array0.concat(array2);
+
+    console.log(array3);
+    // expected output: Array ["a", "b", "c", "d", "e", "f"]
+
+    //Array.from() 메서드는 유사 배열 객체(array-like object)나 반복 가능한 객체(iterable object)를 얕게 복사해 새로운Array 객체를 만듭니다.
+    console.log(Array.from('가나다라이창현'));
+    // expected output: Array ["f", "o", "o"]
+
+    console.log(Array.from([1, 2, 3], x => x + x));
+    // expected output: Array [2, 4, 6]
+
+    const arrfrom = Array.from(
+        {length: 20}, // 배열
+        () => Array(5).fill(2) // 각각의 배열에 적용할 함수
+    );
+
+    console.log(arrfrom)
+
+
+    //new Set
+    // Set() 은 value 들로 이루어진 컬렉션(“집합”이라는 표현이 적절)
+    // Array 와는 다르게 Set 은 같은 value 를 2번 포함할 수 없음
+    //따라서 Set 에 이미 존재하는 값을 추가하려고 하면 아무 일도 없음
+    // 비어있는 새로운 set 을 만듬
+
+    let setA = new Set();
+    // 새로운 set 을 만들고 인자로 전달된 iterable 로 인자를 채움
+    let setB = new Set().add('a').add('b');
+    setB.add('c');
+
+    console.log(setB.size); // 3
+    // has(): 주어진 값이 set 안에 존재할 경우, true 를 반환
+    // indexOf() 보다 빠름. 단, index 가 없음
+    console.log(setB.has('b')); // true
+    // set 에서 주어진 값을 제거
+    setB.delete('b');
+    console.log(setB.has('b')); // false
+    // set 안의 모든 데이터를 제거
+    setB.clear();
+    console.log(setB.size); // 0
+
+
+
+
+    var mySet = new Set();
+
+    mySet.add(1); // Set { 1 }
+
+
+    mySet.add(5); // Set { 1, 5 }
+
+    mySet.add(5); // Set { 1, 5 }
+    mySet.add('some text'); // Set { 1, 5, 'some text' }
+    var o = {a: 1, b: 2};
+    mySet.add(o);
+
+    mySet.add({a: 1, b: 2}); // o와 다른 객체를 참조하므로 괜찮음
+
+    mySet.has(1); // true
+    mySet.has(3); // false, 3은 set에 추가되지 않았음
+    mySet.has(5);              // true
+    mySet.has(Math.sqrt(25));  // true
+    mySet.has('Some Text'.toLowerCase()); // true
+    mySet.has(o); // true
+
+    mySet.size; // 5
+
+    mySet.delete(5); // set에서 5를 제거함
+    mySet.has(5);    // false, 5가 제거되었음
+
+    mySet.size; // 4, 방금 값을 하나 제거했음
+    console.log(mySet);// Set {1, "some text", Object {a: 1, b: 2}, Object {a: 1, b: 2}
+
+
+
+    //new Map()
+    //Map 객체는 키-값 쌍을 저장하며 각 쌍의 삽입 순서도 기억하는 콜렉션입니다. 아무 값(객체와 원시 값)이라도 키와 값으로 사용할 수 있습니다.
+    let myMap = new Map()
+
+    let keyString = '문자열'
+    let keyObj    = {}
+    let keyFunc  = () => {}
+
+    // 값 설정
+    myMap.set(keyString, "'문자열'과 관련된 값")
+    myMap.set(keyObj, 'keyObj와 관련된 값')
+    myMap.set(keyFunc, 'keyFunc와 관련된 값')
+
+    myMap.size              // 3
+
+    // getting the values
+    console.log(myMap.get(keyString)  )  // "'문자열'과 관련된 값"
+    console.log(myMap.get(keyObj))      // "keyObj와 관련된 값"
+    myMap.get(keyFunc)      // "keyFunc와 관련된 값"
+
+    console.log(myMap.get('문자열'))  // "'문자열'과 관련된 값"
+    // keyString === '문자열'이기 때문
+    console.log(myMap.get({}))            // undefined, keyObj !== {}
+    myMap.get(() => {}) // undefined, keyFunc !== function () {}
+
+
+
+    //foreach;
+    const array_f = ['a', 'b', 'c'];
+
+    array_f.forEach(
+        (e) => { console.log(e) }
+    );
+
+    ///for 반복문을 forEach()로 바꾸기
+    const items = ['item1', 'item2', 'item3'];
+    const copy = [];
+
+    // 이전
+    for (let i=0; i<items.length; i++) {
+        copy.push(items[i]);
+    }
+
+    // 이후
+    items.forEach(function(item){
+        copy.push(item);
+    });
+
+
+    // .push()
+    //push() 메서드는 배열의 끝에 하나 이상의 요소를 추가하고, 배열의 새로운 길이를 반환합니다.
+
+
+
+    const animals = ['pigs', 'goats', 'sheep'];
+
+    const count = animals.push('cows');
+    console.log(count);
+    // expected output: 4
+    console.log(animals);
+    // expected output: Array ["pigs", "goats", "sheep", "cows"]
+
+    animals.push('chickens', 'cats', 'dogs');
+    console.log(animals);
+    // expected output: Array ["pigs", "goats", "sheep", "cows", "chickens", "cats", "dogs"]
+
+
+    //Object.entries() 메서드는 for...in와 같은 순서로 주어진 객체 자체의 enumerable 속성 [key, value] 쌍의 배열을 반환합니다.
+    // //(for-in 루프가 다른점은 프로토 타입 체인의 속성도 열거한다는 점입니다).
+    const object12 = {
+        a: 'somestring',
+        b: 42
+    };
+
+    for (const [key, value] of Object.entries(object12)) {
+        console.log(`${key}: ${value}`);
+    }
+
+</script>
+</body>
+</html>

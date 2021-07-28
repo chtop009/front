@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>클래스 get,set</title>
+</head>
+<body>
+<script>
+  //get, set
+  class A{
+    _name = 'no name' ;  // 외부에서 값을 바꾸지 말자라는 의미
+    get getNames(){
+      return this._name + '@@@@' ;
+    }
+
+    set setNames(value){
+      this._name = value + '!!!!';
+    }
+  }
+
+  const a = new A();
+
+  console.log('A : ',a);
+  a.setNames = '이창현'; //set 함수 호출됨
+
+  console.log(a);
+   // get 함수 호출됨
+  console.log(a.getNames);
+  console.log(a._name);
+
+//static 변수 함수
+
+  class S{
+    static age = 37;
+    static hello(){
+      console.log(S.age);
+    }
+  }
+
+  console.log(S,S.age);
+  S.hello();
+
+  class Z{
+    age =37;
+    static  hello(){
+      console.log(this.age);
+    }
+  }
+
+  console.log(Z,Z.age);
+  Z.hello();
+</script>
+</body>
+</html>
