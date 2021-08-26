@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+http://blog.naver.com/popqser2/220800001976 리눅스 초보자 설명
+
+CentOS Linux release 7.7.1908 (Core)
+su root **************
+systemctl restart httpd 리스타트 명령어 ssl passwd  -->   union048622
+/etc/httpd/conf/extra/httpd-vhosts.conf
+
+grant all privileges on market.* to market@localhost identified by '***************';
+grant all privileges on ifiscyber.* to root@ 211.48.194.33 identified by '****************;
+
+
+/etc/httpd/logs 에러로그 확인
+
+경기도의사회
+vi /usr/local/apache/conf/extra/httpd-vhosts.conf 호스트설정
+/usr/local/apache/bin/apachectl restart 아파치 리스타트
+백업 경로 /data/backup/ksidc_bak/backuphome
+
+mysql -u jine_hosdoc -p 카페24 덤프
+
+1515파일 찾기
+find / -name httpd.conf
+
+find / -name '.htaccess' -exec rm -rf {} \;
+
+find 로 찾은 파일명 동시삭제
+
+rm -rf access_log.13-03*
+
+
+권한변경
+chmod wellness ss
+chmod 701 wellness
+1052 ls -al
+1053 history
+
+살아있는 데몬
+ps -afx df -h
+
+
+php.ini
+upload_max_filesize : 최대용량
+max_file_upload : 파일업로드개수
+post_max_size : 전송가능한 용량
+
+
+Name Server #1
+Hostname : ns.dcmate.co.kr
+IP Address : 61.109.250.220
+
+Name Server #2
+Hostname : ns2.dcmate.co.kr
+IP Address : 61.109.250.220
+
+: 치고 set nu 번호 나옴
+: 번호치면 이동
+
+웰니스로 네임서버
+
+차 네임서버 정보
+호스트이름 : ns.biz-valley.com
+
+skyadmin!@#$
+
+메일 호스트 설정
+vi /etc/passwd
+
+vi /etc/mail/sendmail.cf  메일 환경설정
+
+vi /etc/mail/virtusertable 가상메일설정
+
+vi /etc/mail/local-host-names 도메인추가
+
+cd /var/spool/mail 메일 저장하는곳
+
+
+메일추가 하는법
+vi /etc/mail/virtusertable 메일 계정추가
+/etc/init.d/sendmail restart 센드메일 리스타트
+
+echo "안녕하십니까?" | mail -s "안부메일" chtop009@naver.com
+
+
+
+htregency.co.kr
+
+호스팅추가
+
+useradd 계정명
+passwd 비밀번호설정
+kongsriceball.co.kr
+
+vi /etc/named.conf
+cd /var/named/chroot/var/named 존파일 있는곳 유코웍스 서버
+vi /usr/local/apache/conf/extra/httpd-vhosts.conf
+
+
+
+
+vi /usr/local/apache/conf/httpd.conf
+cd /var/named
+
+cd
+cd /usr/local/apache/conf/extra/
+
+
+
+
+
+:set nu vi 편집기 라인 나오게
+
+/usr/local/apache/bin/apachectl restart 아파치리스타트
+/etc/rc.d/init.d/named restart 네임 리스타트
+
+
+/etc/mail/
+
+51서버 네임서버는 ksidc 홈페이지
+
+
+vi /etc/httpd/conf/httpd.conf
+/usr/sbin/apachectl restart
+/etc/rc.d/init.d/named restart
+cd /var/named/chroot/var/named
+
+cn
+
+계정생성
+
+
+su - root 51 계정 루트 권한
+
+
+useradd zzigae
+passwd zzigae
+
+vi /usr/local/apache/conf/httpd.conf
+
+cd /var/named
+
+ls zone 파일 복사 수정
+
+vi /etc/named.conf
+
+apachectl
+named
+
+/usr/local/apache/bin/apachectl restart 아파치리스타트
+/etc/rc.d/init.d/named restart 네임 리스타트
+
+chmod 701 zzigae
+
+
+데이터 베이스 권한
+
+1.grant all privileges on unionplus4261.* to unionplus4261@localhost identified by 'unionplus!@';
+2.grant all privileges onunionplus4261.* tounionplus4261@'%' identified by 'unionplus!@'
+
+
+grant all privileges on kgkma.* to kgkma@175.125.94.22 identified by 'kgkma&&!)'; 성남시
+
+
+
+
+grant all privileges on ifiscyber.* to ifiscyber@211.233.50.244 identified by 'ifiscyber!@#';
+
+grant all privileges on sky.* to sky@'%' identified by 'skydb!@#$'
+
+grant all privileges on *.* to root@121.78.182.106 identified by 'db!1234$'
+
+
+grant all privileges on dtfkorea.* to dtfkorea@localhost identified by '!@#dtf502'
+
+
+grant all privileges on kgkma.* to kgkma@121.78.182.106 identified by '1004'
+
+
+grant all privileges on * to skyit@% identified by 'skysqldb!@#';
+
+grant all privileges on *.* to skyit@% identified by 'sqldb!@#' ; flush privileges;
+
+GRANT CREATE ,ALTER ON kgkma.T_AdminInfo TO smsdb@localhost IDENTIFIED BY 'smsdb' WITH GRANT OPTION;
+
+grant all privileges on *.* to ucoworks@'%' identified by 'skyadm!@#' ;
+
+
+GRANT select,insert ON sky.sms_queue TO chaesundang@221.143.49.83 IDENTIFIED BY 'chaesundangdb!@#' WITH GRANT OPTION;  특정테이블만 허용
+GRANT select,insert ON sky.sms_queue TO auntieannes@114.200.199.146 IDENTIFIED BY 'auntieannesdb!@#' WITH GRANT OPTION;   특정테이블만 허용
+
+
+GRANT select,insert ON sky.sms_queue TO chaesundang@'%' IDENTIFIED BY 'chaesundangdb!@#' WITH GRANT OPTION;
+
+
+
+grant all privileges on groupmaster.* to groupmaster@localhost identified by 'groupmaster!@#' // 로컬호스트
+grant all privileges on sky.* to groupmaster@'%' identified by 'groupmaster!@#' // 전체권한
+grant all privileges on citycar.* to citycar@114.200.199.156 identified by 'citycardb!@#'; // 아이피 권한
+
+grant all privileges on *.* to ucoworks@'%' identified by 'sql!rhksfl' // 전체 테이블 전체권한 mysql workbench 접속 아이디
+
+
+grant all privileges on * to root@'%' identified by 'db!1234$' // 전체권한
+
+
+
+mysql -u root-p hosdoc < jine_hosdoc.sql ;
+
+mysql -u root -p --default-character-set=euckr groupware < sky.sql MySql Dump
+
+
+
+SELECT opt_id AS USERID, opt_post AS USERNAME, COUNT( mseq )AS SCNT
+FROM sms_result_201210
+WHERE ext_col1 ='chaesundang'
+AND result ='6'
+GROUPBY opt_id
+ORDERBY opt_id ASC
+LIMIT 0 , 30
+
+
+
+
+
+
+
+
+localhost 에서만 접속하기 위한 예제입니다.
+
+mysql>GRANT SELECT, INSERT, UPDATE, DELETE ON emp.* TO
+test@localhost IDENTIFIED BY "TestPassword";
+
+mysql>flush privileges;
+
+www.mysite.com 에서만 접속하기 위한 예제입니다.
+
+mysql>GRANT SELECT, INSERT, UPDATE, DELETE ON emp.* TO
+test@www.mysite.com IDENTIFIED BY "TestPassword";
+
+mysql>flush privileges;
+
+
+
+외부 어떤곳에서든 접속하기 위한 예제입니다.
+
+GRANT SELECT, INSERT, UPDATE, DELETE ON emp.* TO test@”%” IDENTIFIED BY "TestPassword
+
+
+
+폴더 권한 변경
+
+chwon -R zzigae.zzigae /home/zzigae/public_html/admin
+
+
+아파치 로그 관리
+/usr/local/apache/logs/
+
+아파치 스톱한후 삭제 할것
+
+
+
+에프티피 리스타트
+/etc/log.d/scripts/services/vsftpd restart
+/usr/sbin/vsftpd/vsftpd restart
+/etc/pam.d/vsftpd/vsftpd restart
+/etc/log.d/scripts/services/vsftpd restart
+/etc/vsftpd/vsftpd restart
+
+
+
+리눅스 시간
+
+date -s '2010-01-25 10:54:00'
+
+
+top 시스템 점유
+free 메모리 점유
+ps afx 데몬이 떠 있는거
+mysqladmin -uroot -p processlist DB 쿼리도
+
+리눅스 사용용량
+
+df -h
+
+
+cd /usr/local/mysql/var mysql 저장장소
+
+
+로그 확인
+
+cd /usr/local/apache/logs/
+
+
+압축하기
+https://recipes4dev.tistory.com/146#31-%ED%98%84%EC%9E%AC-%EB%94%94%EB%A0%89%ED%86%A0%EB%A6%AC%EC%9D%98-%EB%AA%A8%EB%93%A0-%ED%8C%8C%EC%9D%BC%EA%B3%BC-%EB%94%94%EB%A0%89%ED%86%A0%EB%A6%AC%EB%A5%BC-tar%EB%A1%9C-%EB%AC%B6%EA%B8%B0
+
+tar -pcvf  _new.tar   _new
+현 디렉토리 모든 파일 묶기
+tar cvf T.tar *
+
+
+압축풀기
+tar -pxvf _new.tar
+
+
+/home/apache_log/access_log
+
+tar pcvf - cyberpr | split -b 1024m - /home/anyang/cyberpr.tar 대용량 압축
+
+cat cyberpr.tar* | tar pxvf - 대용량 분할압축풀기
+
+
+혹은
+#cat 압축파일.tar.gz* | tar xvzf -
+
+
+cd /var/lib/mysql/data 51 서버 쿼리문 백업
+
+
+벌쳐호스트 설정 파일
+vi /usr/local/apache/conf/extra httpd-vhosts.conf
+
+계정생성스크립트
+/root/bin/setting1.sh
+
+퍼블릭 아래에서 할것
+
+cp -pra new/data _new/data
+
+
+cp -fprav data ../newkma/data
+chgrp -R data
+chown -R data kgkma
+
+
+
+
+vmflrpt
+cp -fprav _new _new2
+
+
+cp -urav _new _new2
+
+데이터베이스 복사
+cp -fprav/data/backup/ksidc_bak/backuphome/20200714/mysql/jine/var/lib/mysql/jine
+
+
+
+chown -R kgkma kgkma 소유권
+chgrp -R kgkma kgkma 그룹소유권
+mysql restart
+
+
+
+http://cfile22.uf.tistory.com/media/133D85114A18118E69130C
+
+du directory_name -h 계정용량 확인
+
+
+
+
+
+/var/lib/mysql
+
+/usr/local/mysql-3.23.57/var DB 저장 위치
+
+tar -pcvf  /home/anyang/kgkma.db.tar   kgkma
+
+
+tar -pxvf _new.tar
+grant all privileges on happycf.* to happycf@119.205.197.85 identified by 'happycf';
+
+
+
+
+grant all privileges on db_oh_count.* to ohadmin@'%' identified by 'rudrleh';
+grant all privileges on db_oh_member.* to ohadmin@'%' identified by 'rudrleh';
+방화벽 추가
+/usr/local/bin/iptables -A INPUT -p tcp --dport 3306 -j ACCEPT
+
+
+/etc/rc.d/init.d/iptables restart
+
+vi /etc/sysconfig/iptables 방화벽 설정 포트 설정
+
+
+
+killall -9 mysqld
+
+show processlist;
+
+
+ps -ef 로 pid 를 찾고 해당 pid 로
+kill -9 pid 로 프로세스를 죽일 수 있지만 그렇게만 하면
+뭔가 없어 보인다.
+
+
+
+/etc/rc.d/init.d/mysqld stop
+/etc/rc.d/init.d/mysqld start
+
+
+cd /etc/skel 퍼블릭 설정 사용자 계정에 그대로 복사 됨
+
+
+http://cafe.naver.com/nsis.cafe?iframe_url=/ArticleRead.nhn%3Farticleid=10525 그룹설정
+usermod nyj -g doctor
+1070 usermod -g doctor nyj
+1071 usermod -g doctor kgkma
+1072 usermod -g doctor anyang
+
+1074 chmod -R 775 nyj
+1075 chmod -R 775 /home/nyj/public_html/nyj/data
+1076 chmod -R 777 /home/nyj/public_html/nyj/data
+1078 chmod -R 777 /home/anyang/public_html/anyang/data
+
+find ./ -type f -exec chmod 644 {} \;
+
+
+
+[root@local ~]# edquota -u 계정명
+- (edquota -g 계정명)계정명 의 형식으로 quota 설정해 줍니다.
+(block은 총 용량을 의미하여 inode는 파일의 갯수를 의미합니다.(용량은 300메가 기준 300 * 1024 = 307200입력 )
+soft는 계정이 사용할수 있는 총용량(오버해서 사용가능), hard는 계정의 절대 용량(오버 안됨)
+
+[root@local ~]# repquota -a
+- 전체의 quota 설정을 확인하실 수 있습니다.
+(quota -v 계정명 (자신의 quota 설정을 확인한다 or 자신의 계정으로 로그인하여 /sbin/quota 실행하면 확인된다.)
+
+[root@local ~]# edquota -p 설정된계정 동일설정계정 동일설정계정
+- quota 설정을 다른 사용자와 동일하게 설정하기
+
+/sbin/edquota -p 설정된계정 설정하고픈계정들...(공백으로 계속 추가 가능)
+설정된 계정와 뒤의 설정하고픈 계정들 모두 동일한 설정으로 세팅된다.
+
+
+
+1. 전체 데이터 베이스 체크및 자동 복구
+mysqlcheck -Aao --auto-repair -u root -p
+2. 특정 데이터 베이스만 체크 및 자동 복구
+mysqlcheck --auto-repair -u root -p [디비명]
+
+
+위치: \Documents and Settings\sys\Application Data\ESTsoft\ALFTP
+
+
+--------------------------------------------------------------------------------
+
+폴더를 통째로 복사하면 됩니다.
+
+파일만하셔도 됩니다.^^
+
+
+업로드로그
+cat /var/log/xferlog
+
+ftp아이디차단
+잠금(락) passwd -l 아이디
+해제(언락) passwd -u 아이디
+
+...
+로그
+cat /var/log/secure | more
+
+/var/log
+
+demsg : 일반적인 이벤트로그, 명령어 : more, tail, head
+
+messages : 데몬, 커널에 대한 로그, 명령어 : more, tail, head
+
+lastlog : 마지막로그, 명령어 : strings
+secure : 보안 로그 ssh침입, 명령어 : more, tail, head
+
+btmp : 로그인을 할 때 5번이상 시도 실패
+
+wtmp : 로그 기록(log history)
+
+utmp : 현재 로그 기록, 명령어 : strings
+
+cron : crond로그, 명령어: tail /var/log/cron
+
+
+secure 하나의 ip, 혹은 파일의 로그
+more secure | grep [IP or File명]
+
+
+효자건설
+/usr/local/apache/conf
+
+
+cd /home/vpopmail/bin
+
+에 들어가서
+
+./vadduser help@posmaster.co.kr help@rhksfl
+
+./vadduser rkdtjr97@skyvan.co.kr happylks0828
+
+./vadduser sky@posmaster.co.kr skymail12
+
+./vadduser ap596@tunecard.co.kr ap596_321
+./vpasswd hdkim@tunecard.co.kr hdkim_321
+
+
+
+./vdeluser hjlee@skyvan.co.kr
+
+
+./vadduser chtop009@skyvan.co.kr chtop009
+
+
+
+F@NX5Vbo
+
+이렇게 하면 계정이 생성됨.
+
+아래는 Qmail 바이너리 사용법
+
+./vadddomain tunecard.co.kr 가상 도메인을 추가한다. postmaster 암호를 물어보는데 이것은 다음에 설치할 qmailadmin 웹 인터페이스에서 로그인 할때 물어볼 암호이다. 형식은 vadddomain 도메인명
+
+가상 도메인과 모든 유저를 삭제한다. vdeldomain 도메인명
+vadduser pop 메일 유저 계정을 만든다. vadduser babo@babo.org
+vdeluser pop 메일 유저 삭제. vdeluser babo@babo.org
+vpasswd 메일 유저의 암호 바꾸기. vpasswd babo@babo.org
+vsetuserquota 각 유저 별로 quota 설정을 할수 있다. vsetuserquota babo@babo.org 51200 (단위는 byte 이다).
+vpopbull 서버에 설정되어 있는 모든 유저들에게 한번에 메일을 보낼때 유용하게 사용할수 있다.
+
+
+도메인 추가후에는 꼭 Qmail을 재시작하자 qmailctl ^^
+/etc/rc.d/init.d/qmail restart
+
+
+mail.hyoja.co.kr
+
+2. 확인하기
+
+[root@indus96 bin]# vi /var/qmail/control/locals
+localhost
+
+[root@indus96 bin]# vi /var/qmail/control/rcpthosts
+localhost
+in4zone.net
+
+[root@indus96 bin]# vi /var/qmail/control/virtualdomains
+in4zone.net:in4zone.net
+
+[root@indus96 bin]# vi /var/qmail/users/assign
++in4zone.net-:in4zone.net:110:110:/home/vpopmail/domains/in4zone.net:-::
+
+
+
+
+
+
+
+
+
+
+Mysql 글자 보는법
+show variables like 'c%';
+
+
+# vi /var/log/maillog
+tail -f /var/log/maillog
+
+du -h --max-depth=1; 디렉토리 용량 확인
+purge master logs to 'localhost-bin.031'; 바이너리 로그 삭제
+
+cd
+UPDATE 창고테이블 a INNER JOIN 입고테이블 b
+
+ON a.상품번호 = b.상품번호
+
+SET a.재고수량 = a.재고수량 + b.재고수량;
+
+
+/usr/local/mysql-5.0.ㅣ37/bin/mysql mysql 경로
+
+
+계정용량 설정
+[root@local ~]# edquota -u 계정명
+- (edquota -g 계정명)계정명 의 형식으로 quota 설정해 줍니다.
+(block은 총 용량을 의미하여 inode는 파일의 갯수를 의미합니다.(용량은 300메가 기준 300 * 1024 = 307200입력 )
+soft는 계정이 사용할수 있는 총용량(오버해서 사용가능), hard는 계정의 절대 용량(오버 안됨)
+
+[root@local ~]# repquota -
+
+
+- 전체의 quota 설정을 확인하실 수 있습니다.
+ (quota -v 계정명 (자신의 quota 설정을 확인한다 or 자신의 계정으로 로그인하여 /sbin/quota 실행하면 확인된다.)
+
+[root@local ~]# edquota -p 설정된계정 동일설정계정 동일설정계정
+- quota 설정을 다른 사용자와 동일하게 설정하기
+ /sbin/edquota -p 설정된계정 설정하고픈계정들...(공백으로 계속 추가 가능)
+ 설정된 계정와 뒤의 설정하고픈 계정들 모두 동일한 설정으로 세팅된다.
+
+
+ C:\WINDOWS\system32\drivers\etc\hosts
+
+ mysql 5.0 덤프
+ mysqldump --extended-insert=true --default-character-set=utf8 -u rikorea2 -p rikorea2 > tst.sql
+
+ mysqldump --extended-insert=true --default-character-set=latin1 -u rikorea2 -p rikorea2 > tst.sql
+mysql -u root -p --default-character-set=euckr rikorea < 20120601.sql
+
+
+
+
+
+
+init_connect='set names utf8'
+character-set-server=utf8
+default-collation=utf8_unicode_ci
+skip-character-set-client-handshake
+character-set-filesystem=euckr
+default-character-set=euckr
+
+
+
+
+default-character-set = euckr
+init_connect = SET collation_connection = euckr-korean_ci
+character-set-server = euckr
+collation-server = euckr_korean_ci
+character-set-client-handshake = FALSE
+
+
+
+
+
+[client]
+default-character-set =euckr
+
+
+[mysqldump]
+default-character-set = euckr
+
+[mysql]
+default-character-set = euckr
+
+
+
+
+cd ffmpeg-php-06
+./configure --enable-libmp31ame --enable-libogg -enable-libvorbis --disable-mmx --enable-shared --enable-xvid --enable-gpl
+
+
+php -r 'phpinfo();' | grep ffmpeg 설치확인
+
+[리눅스버전확인]
+
+cat /proc/version
+
+cat /etc/redhat-release
+
+cat /etc/issue
+
+cat /etc/issue.net
+
+uname -r
+
+
+mysql 쿼리문 백업 정보
+cd /home/mysql_data
+
+cd /var/lib/mysql/data
+
+
+[CPU정보]
+
+
+cat /proc/cpuinfo
+
+[메모리정보]
+cat /proc/meminfo
+
+
+
+www# mysqldump -u계정명 -p비밀번호 --default-character-set=euckr 디비명 > 백업.sql
+mysqldump: Character set 'euckr' is not a compiled character set and is not specified in the '/usr/share/mysql/charsets/Index' file
+
+아래와같은 방법으로 복구
+
+www# /usr/local/httpd/mysql/bin/mysql --default-character-set=euckr -u계정명 -p비밀번호 디비명 < 백업.sql
+/usr/local/httpd/mysql/bin/mysql: Character set 'euckr' is not a compiled character set and is not specified in the '/usr/local/httpd/mysql/share/mysql/charsets/Index.xml' file
+
+
+UPDATE a_table a INNER JOIN b_table b ON a.wr_name = b.name SET a.mem__id = b.user_id
+
+해결되었습니다..고수님 감사합니다요.
+
+UPDATE 창고테이블 a INNER JOIN 입고테이블 b
+
+ON a.상품번호 = b.상품번호
+
+SET a.재고수량 = a.재고수량 + b.재고수량;
+
+MySql은 이런식으로 하니까 되네요ㅎㅎ
+
+
+
+
+아파치는 httpd.conf파일에 LimitRequestBody 기능을 통해 업로드 파일의 크기를 제한한다.
+설정할 수 있는 값은 0부터 최대 2,147,483,647(2Giga)인데 /etc/httpd.conf파일을 열어 다음과 같이 설정한다면
+
+<DIRECTORY />
+LimitRequestBody 5000000
+</DIRECTORY>
+
+<DIRECTORY "/home/userdir">
+LimitRequestBody 10240000
+</DIRECTORY>
+
+웹서버의 홈디렉토리(/)는 모든 파일의 크기를 5M로 제한하고 /home/userdir은 10M로 제한하게 됩니다.
+이렇게 설정 후에 크기가 초과되는 파일의 업로드시 Request Entity Too Large라는 에러가 나타나게 됩니다.
+위의 값은 패키지에 따라 /etc/httpd/conf.d/php.conf로 별도로 구분되기도 합니다.
+
+
+
+PHP를 사용한다면 /etc/php.ini파일에서 다음과 같은 부분을 수정하여야 합니다.
+
+1) UPLOAD기능을 사용할 것인지를 결정
+file_uploads = On
+
+2) 최대 업로드 파일의 크기 지정
+upload_max_filesize = 20M
+
+3) POST방식으로 넘길 데이터의 최대 크기 지정
+post_max_size = 20M
+
+4) PHP에서 사용할 최대 메모리 크기 지정
+memory_limit = 20M
+
+5) 최대 실행 시간 지정
+업로드할 파일의 용량이 커질 수록 시간을 길게 잡아야 합니다.
+단, 0으로 설정하면 제한을 두지 않는 것이 됩니다.
+max_execution_time = 300
+
+단, 위의 값은 memory_limit > post_max_size > upload_max_fileszie 크기 순으로 지정되어야 합니다.
+[이 게시물은 주인장님에 의해 2008-03-02 22:48:58 운영체계(O.S)에서 이동 됨]
+[출처] [웹서버운영] PHP와 아파치에서 대용량 파일 업로드를 위해 변경해야 하는 설정들|작성자 하늘호수
+
+
+VIEW
+
+CREATE VIEW v_holiday_day AS
+SELECT mem_id,holi_r , holi_r2 , holi_r-holi_r2 AS value FROM n_holiday_day
+
+
+
+
+/etc/rc.d/init.d/crond restart 크론 재시작
+crontab -e 크론 추가
+
+
+
+
+# .---------------- 분 (0 - 59)
+
+# | .------------- 시 (0 - 23)
+
+# | | .---------- 일 (1 - 31)
+
+# | | | .------- 월 (1 - 12)
+
+# | | | | .---- 주 (0 - 7)
+
+# | | | | |
+
+ * * * * * 실행할 명령(프로그램)
+
+
+주 (0 - 7) (0과 7=일요일, 1=월요일, 2=화요일, 3=수요일, 4=목요일, 5=금요일, 6=토요일)
+
+
+
+* 시간 표현 형식
+
+1. 특정 값: 숫자로 표현       예: 30 2 * * 7 명령어   => 매주 일요일 새벽 2시 30분에 실행
+
+2. 여러 값: 콤마로 구분하여 표현  예: 10,30,50 * * * * 명령어 => 매 10, 30, 50분 마다 실행
+
+3. 범위 값: 하이픈으로 구분하여 표현 예: 0 1-3 * * * 명령어   => 매일 1, 2, 3시에 실행
+
+4. 시간 간격: 슬래시로 구분하여 표현 예: 1 */5 * * * 명령어   => 매일 5시간 간격으로 1분에 실행
+
+5. 모든 값: 별표로 구분하여 표현  예: * * * * * 명령어    => 매분 마다 실행
+[출처] crontab 사용법|작성자 쐬주먹는재혀니
+
+
+
+
+
+
+
+
+dos2unix  holiday.day.list.php 유닉스 타입으로 바꾸기
+
+
+LOAD DATA INFILE '/home/dodorim/jeolla.txt' INTO TABLE ZIPCODE FIELDS TERMINATED BY '|'; 로드데이타
+load data local infile '/home/dodorim/zipcode_db.csv' replace into table sin_zipcode fields terminated by ',';
+
+
+
+
+group@rhksfl
+
+
+
+톰캣 재시작
+/usr/local/tomcat7/bin/catalina.sh stop
+
+/usr/local/tomcat7/bin/catalina.sh start
+
+
+
+해당 서버 슬로우쿼리 로그 경로는 log-slow-queries = /var/lib/mysql/data/slow_logs
+
+
+톰캣 리스타트
+cd /usr/local/tomcat7
+shutdown.sh
+startup.sh
+
+
+
+
+</body>
+</html>
