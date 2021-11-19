@@ -94,3 +94,31 @@ git branch -D my-idea
 >git push -d origin  my-idea  원격 브런치 삭게
 </body>
 </html>
+
+1. 로컬에 있는 내용 무시하고 git 에서 내려받기
+
+# git fetch --all
+
+# git reset --hard origin/develop
+
+
+
+2. 특정 branch에서 내려받기
+
+# git fetch --all
+
+# git reset --hard origin/branch_name
+
+
+
+3. 작업중인 내용을 branch로 만들고 내려받기
+
+# git checkout master
+
+# git branch (branch_name)
+
+# git fetch --all
+
+# git reset --hard origin/master
+
+
