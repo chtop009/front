@@ -6,6 +6,88 @@
 </head>
 <body>
 <script>
+    const animals = [
+        {name: 'lion', size:'big', isAgg:true,weight:200},
+        {name: 'monkey', size:'meduim', isAgg:true,weight:30},
+        {name: 'cat', size:'small', isAgg:false,weight:10},
+        {name: 'rat', size:'small', isAgg:false,weight:2}
+    ]
+//정통 반목문
+    for(let i =0;i < animals.length; i++){
+        console.log('11', animals[i]);
+    }
+
+    for(let item of animals){
+        console.log(item.name)
+    }
+
+    let i = 0;
+    while( i < 4){
+        console.log(animals[i]);
+        i++;
+    }
+
+  animals.forEach((item,idx) => {
+   console.log('foreach', item.name ) ;
+      console.log('foreach', idx ) ;
+  });
+
+    const animalsMap  = animals.map( (item) => { return item; })
+    console.log('Map',animalsMap);
+
+    const animalsFilter =  animals.filter((item)=>{ return item.size === 'small' });
+    console.log('filter', animalsFilter);
+
+    const numbers =[1,10,11,23,444];
+    const total = numbers.reduce((acc,cur)=>{
+        console.log('reduce', acc,cur);
+        return acc+cur;
+    });
+    console.log('total', total);
+// acc 더한값 , cur 현재값
+    const totalWeight = animals.reduce((acc,cur)=>{
+        return acc + cur.weight;
+    },0);  // 배열 처음 값이 없으므로 0 으로 초기화 시킨다.
+
+    console.log(totalWeight);
+
+
+    let Data=[
+        {
+            name:'사과',
+            state:'상급',
+            price:'2,000원'
+        },
+        {
+            name:'사과폰pro10',
+            state:'중급',
+            price:'1100000원'
+        },
+        {
+            name:'바나나',
+            state:'상급',
+            price:'800원'
+        },
+        {
+            name:'바나나폰',
+            state:'하급',
+            price:'50000원'
+        }
+    ];
+
+    const fruits = Data.reduce((array,fruit,i)=>{
+        console.log('redu ii', i);
+        array.quality = fruit.state;
+        array.price2 = fruit.price;
+        return array;
+    });
+
+    console.log(fruits);
+
+   // const animalreduce
+
+    console.log('+==========================================');
+
   var arr = ['1', '2', '3', '4', '5'];
 
   // 2번째 index부터 처음부터 끝까지 (default)의 엘리먼트를 복사합니다.
